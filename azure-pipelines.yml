@@ -15,6 +15,9 @@ stages:
       - job: BuildJob
         steps:
           - script: echo Building...
+      - job: TestJob
+        steps:
+          - script: echo TestJob...
 
   - stage: Deploy
     dependsOn: Build
